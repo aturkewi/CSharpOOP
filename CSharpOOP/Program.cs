@@ -6,7 +6,9 @@ namespace CSharpOOP
 	{
 		public static void Main (string[] args)
 		{
-			Console.WriteLine ("Hello World!");
+			var newWarehouse = new Warehouse ("Warehouse 1", 101);
+			var myItem = newWarehouse.FindAndReturnItem (101);
+			Console.WriteLine ("My item is {0}", myItem.Name);
 		}
 	}
 }
