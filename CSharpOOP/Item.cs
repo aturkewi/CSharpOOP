@@ -18,6 +18,11 @@ namespace CSharpOOP
 	class Software : Item
 	{
 		public string ISBN { get; set;}
+		public override void Purchase ()
+		{
+			base.Purchase ();
+			Console.WriteLine ("Purchasing software with ID {0} and with ISBN: {0}", ID, ISBN);
+		}
 	}
 
 	// Hardware inherits from Item
@@ -31,6 +36,13 @@ namespace CSharpOOP
 	{
 		public string CPUType { get; set;}
 		public string Disks { get; set;}
+		public override void Purchase ()
+		{
+			// Calls method from base class
+			base.Purchase ();
+			// Does a little extra after calling base method.
+			Console.WriteLine ("My CPUType is {0}", CPUType);
+		}
 	}
 
 	// Peripheral inherits from Hardware
